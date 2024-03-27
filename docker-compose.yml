@@ -1,6 +1,29 @@
 version: "3"
 
 services:
+  # For deployment
+  # collectivo:
+  #   container_name: collectivo
+  #   build: ./collectivo_extension
+  #   environment:
+  #     NUXT_API_TOKEN: ${COLLECTIVO_API_TOKEN}
+  #     NUXT_DIRECTUS_ADMIN_EMAIL: ${DIRECTUS_ADMIN_EMAIL}
+  #     NUXT_DIRECTUS_ADMIN_PASSWORD: ${DIRECTUS_ADMIN_PASSWORD}
+  #     NUXT_KEYCLOAK_ADMIN_CLIENT: ${KEYCLOAK_ADMIN_CLIENT}
+  #     NUXT_KEYCLOAK_ADMIN_SECRET: ${KEYCLOAK_ADMIN_SECRET}
+  #     NUXT_PUBLIC_COLLECTIVO_URL: ${COLLECTIVO_URL}
+  #     NUXT_PUBLIC_DEFAULT_LOCAL: ${COLLECTIVO_DEFAULT_LOCAL}
+  #     NUXT_PUBLIC_DIRECTUS_URL: ${DIRECTUS_URL}
+  #     NUXT_PUBLIC_KEYCLOAK_URL: ${KEYCLOAK_URL}
+  #     NUXT_PUBLIC_KEYCLOAK_REALM: ${KEYCLOAK_REALM}
+  #   depends_on:
+  #     keycloak:
+  #       condition: service_healthy
+  #     directus-db:
+  #       condition: service_healthy
+  #   ports:
+  #     - "3000:3000"
+
   directus:
     image: directus/directus:10.10.4
     ports:
