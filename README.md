@@ -1,10 +1,8 @@
 # Collectivo Quickstart
 
-Collectivo is a modular plattform for collaboration, participation, and data management.
+Collectivo is a modular plattform for collaboration, participation, and data management. For more information, please visit the [documentation](https://github.com/collectivo-dev/collectivo).
 
 This repository is a template to start with your own instance of [Collectivo](https://github.com/collectivo-dev/collectivo). The repository can also be used as a starter template to create [custom extensions](#publish-your-features-as-an-extension).
-
-For more information on Collectivo, please see the [documentation](https://github.com/collectivo-dev/collectivo).
 
 ## Overview
 
