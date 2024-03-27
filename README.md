@@ -1,6 +1,8 @@
 # Collectivo Quickstart
 
-This repository is a template to start with your own instance or extension of [Collectivo](https://github.com/collectivo-dev/collectivo).
+Collectivo is a modular plattform for collaboration, participation, and data management.
+
+This repository is a template to start with your own instance of [Collectivo](https://github.com/collectivo-dev/collectivo). The repository can also be used as a starter template to create [custom extensions](#publish-your-features-as-an-extension).
 
 For more information on Collectivo, please see the [documentation](https://github.com/collectivo-dev/collectivo).
 
@@ -8,12 +10,10 @@ For more information on Collectivo, please see the [documentation](https://githu
 
 Here is an overview of this repository:
 
-- `/collectivo_extension`: A [Nuxt](https://nuxt.com/) app that extends the original Collectivo package. Custom features can be added by [adapting the Nuxt app](#adding-custom-features) or by [adding extensions](#adding-an-extension).
+- `/collectivo_extension`: A [Nuxt](https://nuxt.com/) app that extends the original Collectivo package. Custom features can be added by [adapting the Nuxt app](#develop-custom-features) or [adding extensions](#add-an-extension).
 - `/docker-compose.yml`: A [Docker](https://docs.docker.com/) setup to run an instance of [Directus](https://directus.io/) and [Keycloak](https://www.keycloak.org/).
 
-## Installation
-
-This is a guide to install an instance of Collectivo on your local machine. If you want to install Collectivo on a server, please go to [deployment](#deployment).
+## Install locally
 
 Install the following requirements:
 
@@ -89,11 +89,15 @@ Log in with the following example users:
 - Editor: editor@example.com / editor (Collectivo, Directus)
 - User: user@example.com / user (Collectivo)
 
-## Adding an extension
+## Configuration
+
+The main settings of Collectivo can be configured in `collectivo_extension/app.config.ts`.
+
+## Add an extension
 
 To add an extension to Collectivo, add the name of the package in `package.json` and `nuxt.config.ts`. For more information, see [Nuxt Layers](https://nuxt.com/docs/guide/going-further/layers).
 
-## Adding custom features
+## Develop custom features
 
 You can adapt the Nuxt app in `/collectivo_extension` to add your own custom functionality. To do so, create your own [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of this repository.
 
@@ -113,7 +117,7 @@ Finally, publish your extension on npm.
 pnpm publish -r --access=public
 ```
 
-## Deployment
+## Deploy to a server
 
 To deploy Collectivo on a server, make sure to generate a new client secret in Keycloak and set fresh secrets in `.env`.
 
