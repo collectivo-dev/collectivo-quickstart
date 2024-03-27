@@ -9,20 +9,20 @@ export default schema;
 // See https://docs.directus.io/reference/system/collections.html
 schema.collections = [
   {
+    collection: "example_folder",
+    meta: {},
+  },
+  {
     collection: "example_collection",
     schema: { name: "example_collection" },
     meta: { group: "example_folder" },
-  },
-  {
-    collection: "example_folder",
-    meta: {},
   },
 ];
 
 // Here you can define fields for your collections
 // See https://docs.directus.io/reference/system/fields.html
 schema.fields = [
-  ...directusSystemFields("example"),
+  ...directusSystemFields("example_collection"),
   {
     collection: "example_collection",
     field: "example_field",
