@@ -1,0 +1,17 @@
+{
+  "name": "collectivo-quickstart-repo",
+  "private": true,
+  "description": "A template for a new instance or extension of Collectivo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run -r dev",
+    "build": "pnpm run -r build",
+    "preview": "node collectivo_extension/.output/server/index.mjs",
+    "seed": "curl -f -LI --header \"Authorization:badToken\" --request POST \"http://localhost:3000/api/migrate/?examples=true\""
+  },
+  "author": "Joël Foramitti",
+  "license": "Unlicense",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
