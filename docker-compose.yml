@@ -4,7 +4,7 @@ services:
   # For production
   # collectivo:
   #   container_name: collectivo
-  #   build: ./collectivo_extension
+  #   build: ./collectivo
   #   environment:
   #     NUXT_API_TOKEN: ${COLLECTIVO_API_TOKEN}
   #     NUXT_DIRECTUS_ADMIN_EMAIL: ${DIRECTUS_ADMIN_EMAIL}

@@ -8,7 +8,7 @@ This repository is a template to start with your own instance of [Collectivo](ht
 
 Here is an overview of this repository:
 
-- `/collectivo_extension`: A [Nuxt](https://nuxt.com/) app that extends the original Collectivo package. Custom features can be added by [adapting the Nuxt app](#develop-custom-features) or [adding extensions](#add-an-extension).
+- `/collectivo`: A [Nuxt](https://nuxt.com/) app that extends the original Collectivo package. Custom features can be added by [adapting the Nuxt app](#develop-custom-features) or [adding extensions](#add-an-extension).
 - `/docker-compose.yml`: A [Docker](https://docs.docker.com/) setup to run an instance of [Directus](https://directus.io/) and [Keycloak](https://www.keycloak.org/).
 
 ## Install locally
@@ -89,7 +89,7 @@ Log in with the following example users:
 
 ## Configuration
 
-The main settings of Collectivo can be configured in `collectivo_extension/app.config.ts`.
+The main settings of Collectivo can be configured in `collectivo/app.config.ts`.
 
 ## Add an extension
 
@@ -97,7 +97,7 @@ To add an extension to Collectivo, add the name of the package in `package.json`
 
 ## Develop custom features
 
-You can adapt the Nuxt app in `/collectivo_extension` to add your own custom functionality. To do so, create your own [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of this repository.
+You can adapt the Nuxt app in `/collectivo` to add your own custom functionality. To do so, create your own [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) of this repository.
 
 For further information, please see the [development guide](https://github.com/collectivo-dev/collectivo#development-guide).
 
@@ -105,7 +105,7 @@ For further information, please see the [development guide](https://github.com/c
 
 You can share your custom functionality with others by creating an extension of Collectivo as an npm package.
 
-To do so, configure the name, version, author, and license in [`collectivo_extension/package.json`](https://docs.npmjs.com/cli/v6/configuring-npm/package-json) and set `private:false`.
+To do so, configure the name, version, author, and license in [`collectivo/package.json`](https://docs.npmjs.com/cli/v6/configuring-npm/package-json) and set `private:false`.
 
 Then, change the name of your extension in [registerExtension.ts](https://github.com/collectivo-dev/collectivo#creating-an-extension).
 
