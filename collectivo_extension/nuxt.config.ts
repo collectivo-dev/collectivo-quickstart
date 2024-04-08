@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   // Add your extensions here
   // https://nuxt.com/docs/getting-started/layers
   extends: ["@collectivo/collectivo"],
+  runtimeConfig: {
+    public: {
+      customVar: process.env.CUSTOM_VAR || "My custom variable (default value)",
+    },
+  },
   i18n: {
     lazy: true,
     langDir: "./lang",
