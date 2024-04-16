@@ -4,7 +4,7 @@
   "description": "A template for a new instance or extension of Collectivo",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm run -r dev",
+    "dev": "pnpm run -r dev --host",
     "build": "pnpm run -r build",
     "preview": "node collectivo/.output/server/index.mjs",
     "seed": "curl -f -LI --header \"Authorization:badToken\" --request POST \"http://localhost:3000/api/migrate/?examples=true\""

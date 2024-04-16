@@ -1,12 +1,4 @@
-import {
-  createItem,
-  createItems,
-  createUser,
-  deleteItems,
-  readRoles,
-  readUsers,
-  updateUser,
-} from "@directus/sdk";
+import { createItem, deleteItems } from "@directus/sdk";
 
 // This function can be used to create example data for your extension
 export default async function examples() {

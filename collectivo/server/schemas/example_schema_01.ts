@@ -32,6 +32,25 @@ schema.fields = [
   },
 ];
 
+// Here you can define automated workflows
+// The following flow will call the api/example script
+// whenever an item in the example_collection is updated
+// See https://docs.directus.io/reference/system/flows.html
+schema.createNuxtHook(
+  {
+    name: "example_flow",
+    status: "active",
+    accountability: "all",
+    trigger: "event",
+    options: {
+      type: "action",
+      scope: ["items.update"],
+      collections: ["example_collection"],
+    },
+  },
+  "api/example",
+);
+
 // Here you can define custom translations
 // See https://docs.directus.io/reference/system/translations.html
 schema.translations = [

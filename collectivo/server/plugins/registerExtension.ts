@@ -1,5 +1,5 @@
 import pkg from "../../package.json";
-import s001_example_migration from "../schemas/001_schema_example";
+import example_schema_01 from "../schemas/example_schema_01";
 import examples from "../examples/examples";
 
 // Register extension on startup
@@ -8,7 +8,7 @@ export default defineNitroPlugin(() => {
     name: "example",
     description: pkg.description,
     version: pkg.version,
-    schemas: [s001_example_migration],
+    schemas: [example_schema_01],
     examples: examples,
   });
 });
